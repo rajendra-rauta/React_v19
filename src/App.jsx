@@ -34,8 +34,8 @@ const NetflixSeries = () => {
         <img src="img.jpg" height={300} width={400}></img>
       </div>
       <h2>Name {name} </h2>
-      <h3>-{ph}</h3>
-      <h3>-hello</h3>
+      <h3>{ph}</h3>
+      <h3>hello</h3>
       <p></p>
       {/* <button>{age >= 18 ? "Watch Now" : "Not Avilabe!"}</button> */}
       {/* <button>{canWatch}</button> */}
