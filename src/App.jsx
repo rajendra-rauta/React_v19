@@ -14,7 +14,19 @@ export const App = () => {
 
 const NetflixSeries = () => {
   const name = "Rajendra Rauta"
-  const ph= "7846828248"
+  const ph = "7846828248"
+
+
+
+  let  age = 25
+  // let canWatch = "Watch Now"
+  // if(age<=18) canWatch = "Not Avilable";
+
+  const canWatch = () => {
+    if(age>=18)  return "Watch Now" ;
+    return "Not avilable"; 
+  };
+
   return (
 
     <div>
@@ -25,6 +37,9 @@ const NetflixSeries = () => {
       <h3>-{ph}</h3>
       <h3>-hello</h3>
       <p></p>
+      {/* <button>{age >= 18 ? "Watch Now" : "Not Avilabe!"}</button> */}
+      {/* <button>{canWatch}</button> */}
+      <button>{canWatch()}</button>
     </div>
 
   )
