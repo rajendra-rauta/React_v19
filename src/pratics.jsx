@@ -5,5 +5,6 @@ export const Prattices = ()=>{
     return <>
         <p>{std.length ==0 && "No student Find"}</p>
         <p>Number of Student :{std.length}</p>
+        <p>Total number of student is : </p>
     </>
 }
