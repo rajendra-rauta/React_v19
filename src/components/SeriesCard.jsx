@@ -1,5 +1,6 @@
 
 export const SeriesCard = ({data}) =>{
+    // eslint-disable-next-line react/prop-types
     const {id,img_url,name,rating,description,cast,genre,watch_url} =data;
     return (
         <li>
