@@ -5,7 +5,7 @@ export const SeriesCard = ({data}) =>{
     return (
         <li>
           <div>
-            {/* <img src={img_url} height={300} width={400}></img> */}
+            <img src={img_url} height={300} width={400}></img>
           </div>
           <h2>Name:{name} </h2>
           <h3>Rating:{rating}</h3>
@@ -17,4 +17,9 @@ export const SeriesCard = ({data}) =>{
         </li>
       );
 }
-  
+
+
+
+
+
+
