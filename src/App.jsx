@@ -1,12 +1,16 @@
 // import App.css fr 
 import { NetflixSeries } from "./components/NetflixSeries";
+// import "./components/"
 
 
 export const App = () => {
   // const value = "Rajendra Rauta"
   return (
  
-      <NetflixSeries />
+      <section className="container">
+      <h1 className="card-heading">List of Best Netflix Series</h1>
+        <NetflixSeries />
+      </section>
    
   );
 };
