@@ -1,4 +1,12 @@
-* {
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+
+
+
+/* * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -61,7 +69,7 @@ a {
     max-width: 142rem;
     margin: 0 auto;
     padding: 9.6rem 2.4rem;
-}
+} 
 .grid {
     display: grid;
     gap: 9.6rem;
@@ -71,4 +79,4 @@ a {
 }
 .grid-three-cols {
     grid-template-columns: repeat(3,1fr);
-}
+}  */

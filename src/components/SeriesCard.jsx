@@ -25,10 +25,11 @@ export const SeriesCard = ({ data }) => {
   return (
     <li className={styles.card}>
       <div>
-        <img src={img_url} height={300} width={400}></img>
+        <img src={img_url} height="40%" width="40%"></img>
       </div>
-      <div className={styles["card-content"]}>
-        <h2>Name:{name} </h2>
+      {/* <div className={styles["card-content"]}> */}
+      <div className="flex flex-col gap-2 p-6px">
+        <h2 className="text-3xl font-bold underline">Name:{name} </h2>
         <h3>Rating:<span className={`${styles.rating} ${rating_class}`}>{rating}</span></h3>
         <p>Summary :{description}</p>
         <p>Genre: {genre}</p>
