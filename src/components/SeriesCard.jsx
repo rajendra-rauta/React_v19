@@ -1,7 +1,17 @@
 
 export const SeriesCard = ({data}) =>{
     // eslint-disable-next-line react/prop-types
-    const {id,img_url,name,rating,description,cast,genre,watch_url} =data;
+    const {img_url,name,rating,description,cast,genre,watch_url} =data;
+
+
+    const btn_style = {
+      padding:"1.2rem 2.4rem",
+              border:"none",
+              fontSize:"1.6rem",
+              backgroundColor:"var(--btn-hover-bg-color)",
+              color :"var(--bg-color)"
+            
+    }
     return (
         <li className="card">
           <div>
@@ -14,7 +24,7 @@ export const SeriesCard = ({data}) =>{
           <p>Genre: {genre}</p>
           <p>Cast: {cast}</p>
           <a href={watch_url} target="_blank">
-            <button>Watch Now</button></a>
+            <button style={btn_style}>Watch Now</button></a>
             </div>
         </li>
       );
