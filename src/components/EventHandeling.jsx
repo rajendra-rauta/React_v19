@@ -31,7 +31,7 @@ const handleWelcomeUser = (user) =>{
         {/* <button onClick={handleWelcomeUser("Rajendra")}>click Me!</button> */}
         <button onClick={() =>handleWelcomeUser("Rajendra")}>click Me!</button>
         <button onClick={() =>handleWelcomeUser("Ram")}>click Me!</button>
-
+ 
 
         </>
     )
