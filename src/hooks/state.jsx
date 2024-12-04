@@ -16,8 +16,9 @@ export const State = () => {
   };
   return (
     <>
+      
       <div className="main-div">
-        <h1>{count}</h1>
+      <h1>{count}</h1>
         <button onClick={handleButtonClick}>Increment</button>
       </div>
       <ChildComponent count={count} />
