@@ -28,8 +28,6 @@ export const State = () => {
     //   <ChildComponent count={count} />
     // </>
 
-
-
     <>
 
       <div className="main-div">
