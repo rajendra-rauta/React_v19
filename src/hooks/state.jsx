@@ -44,6 +44,7 @@ function ChildComponent({ count }) {
   return (
     <div className="main-div">
       <h2> Child Component - {count} </h2>
+      
     </div>
   );
 }
