@@ -3,9 +3,10 @@
 // import { EventPropagation } from "./components/EventPropagation";
 // import { EventProps } from "./components/EventsProps";
 // import "./components/Netflix.css";
+import { DerivedState } from "./components/DeriverState";
 import "./components/Ev.css";
 import styles from "./components/Netflix.module.css";
-import { State } from "./hooks/state";
+// import { State } from "./hooks/state";
 import './index.css'
 
 
@@ -14,12 +15,13 @@ export const App = () => {
   return (
 
     <section >
-      <h1 className={styles["card-heading"]}>List of Best Netflix Series</h1>
+      {/* <h1 className={styles["card-heading"]}>List of Best Netflix Series</h1> */}
       {/* <NetflixSeries /> */}
       {/* <EventHandeling/> */}
       {/* <EventProps/> */}
       {/* <EventPropagation /> */}
-      <State/>
+      {/* <State/> */}
+      <DerivedState />
 
     </section>
 

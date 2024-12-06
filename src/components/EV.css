@@ -4,6 +4,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
   }
   
   .g-div {
@@ -63,4 +64,6 @@
     padding: 1.2rem 2.4rem;
     background-color: #f7dc6f;
   }
-  
+  h1 {
+    font-size: 3rem;
+  }
