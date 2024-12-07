@@ -3,9 +3,10 @@
 // import { EventPropagation } from "./components/EventPropagation";
 // import { EventProps } from "./components/EventsProps";
 // import "./components/Netflix.css";
-import { DerivedState } from "./components/DeriverState";
+// import { DerivedState } from "./components/DeriverState";
 import "./components/Ev.css";
-import styles from "./components/Netflix.module.css";
+import { LiftingState } from "./components/LiftStateUp";
+// import styles from "./components/Netflix.module.css";
 // import { State } from "./hooks/state";
 import './index.css'
 
@@ -21,7 +22,8 @@ export const App = () => {
       {/* <EventProps/> */}
       {/* <EventPropagation /> */}
       {/* <State/> */}
-      <DerivedState />
+      {/* <DerivedState /> */}
+      <LiftingState />
 
     </section>
 
