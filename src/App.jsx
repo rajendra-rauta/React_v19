@@ -5,10 +5,11 @@
 // import "./components/Netflix.css";
 // import { DerivedState } from "./components/DeriverState";
 import "./components/Ev.css";
-import { LiftingState } from "./components/LiftStateUp";
+// import { LiftingState } from "./components/LiftStateUp";
 // import styles from "./components/Netflix.module.css";
 // import { State } from "./hooks/state";
 import './index.css'
+import { ToggleSwitch } from "./projects/toggleswitch/ToggleSwitch";
 
 
 export const App = () => {
@@ -23,7 +24,9 @@ export const App = () => {
       {/* <EventPropagation /> */}
       {/* <State/> */}
       {/* <DerivedState /> */}
-      <LiftingState />
+      {/* <LiftingState /> */}
+      <ToggleSwitch />
+
 
     </section>
 
