@@ -19,7 +19,7 @@ export const ToggleSwitch = () => {
             <div className="toggle-switch" style={BgColour} onClick={handletoggleSwitch}>
                 <div className={`switch ${cheackIsOn}`}>
                     <span className="switch-state">{cheackIsOn}</span>
-                </div>
+                </div> 
             </div>
         </>
     )
