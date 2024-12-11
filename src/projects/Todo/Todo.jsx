@@ -8,14 +8,19 @@ export const Todo = () => {
     const handleInputChange = (value) => {
         setInputValue(value)
     };
-    const handleFormSubmit =(event) =>{
+    const handleFormSubmit = (event) => {
         event.preventDefault();
-        if(!inputValue) 
+        if (!inputValue)
             return;
 
-        if()
+        if (task.includes(inputValue)) {
+            setInputValue("");
+            return;
+        }
+
         setTask((prevTask) => [...prevTask, inputValue])
-        
+        setInputValue("");
+
     }
     return (
         <section className="todo-container">
@@ -40,6 +45,18 @@ export const Todo = () => {
                         <button type="submit" className="todo-btn">Add Task</button>
                     </div>
                 </form>
+                <section className="MyOnOrdList">
+                <ul>
+                    {
+                        task.map((curTask, index) =>{
+                            return <li key={}>
+
+                            </li>
+                        })
+                    }
+                </ul>
+
+                </section>
             </section>
 
         </section>
