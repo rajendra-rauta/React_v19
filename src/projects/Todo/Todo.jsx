@@ -1,11 +1,12 @@
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { IoMdCheckmark } from "react-icons/io";
 import { MdDeleteForever } from "react-icons/md";
 import "./Todo.css";
 export const Todo = () => {
     const [inputValue, setInputValue] = useState("");
     const [task, setTask] = useState([]);
+    const [dateTime, setdateTime] = useState("")
 
     const handleInputChange = (value) => {
         setInputValue(value)
@@ -22,42 +23,63 @@ export const Todo = () => {
         setTask((prevTask) => [...prevTask, inputValue])
         setInputValue("");
     }
-    return (
-        <section className="todo-container">
-            <header>
-                <h1>
-                    Todo List
-                </h1>
-            </header>
-            <section>
-                <form className="form" onSubmit={handleFormSubmit}>
-                    <div>
-                        <input type="text" className="todo-input" autoComplete="off"
-                            value={inputValue}
-                            onChange={(event) => handleInputChange(event.target.value)}
-                        >
-                        </input>
-                    </div>
-                    <div>
-                        <button type="submit" className="todo-btn">Add Task</button>
-                    </div>
-                </form>
-                <section className="myOnOrdList">
-                    <ul>
-                        {
-                            task.map((curTask, index) => {
-                                return <li key={index} className="todo-item">
-                                    <span>{curTask}</span>
-                                    <button className="check-btn" ><IoMdCheckmark /></button>
-                                    <button className="delete-btn"><MdDeleteForever /></button>
-                                </li>
-                            })
-                        }
-                    </ul>
-                </section>
-            </section>
 
+
+
+
+    //  date and time 
+    useEffect(() => {
+        const interval = setInterval(() => {
+            const now = new Date();
+            const formattedDate = now.toLocaleDateString();
+            const formattedTime = now.toLocaleTimeString();
+
+            setdateTime(`${formattedDate}- ${formattedTime}`);
+        }, 1000);
+
+        return () => clearInterval(interval);
+     }, [])
+
+
+
+
+return (
+    <section className="todo-container">
+        <header>
+            <h1>
+                Todo List
+            </h1>
+            <h2 className="date-time">{dateTime}</h2>
+        </header>
+        <section>
+            <form className="form" onSubmit={handleFormSubmit}>
+                <div>
+                    <input type="text" className="todo-input" autoComplete="off"
+                        value={inputValue}
+                        onChange={(event) => handleInputChange(event.target.value)}
+                    >
+                    </input>
+                </div>
+                <div>
+                    <button type="submit" className="todo-btn">Add Task</button>
+                </div>
+            </form>
+            <section className="myOnOrdList">
+                <ul>
+                    {
+                        task.map((curTask, index) => {
+                            return <li key={index} className="todo-item">
+                                <span>{curTask}</span>
+                                <button className="check-btn" ><IoMdCheckmark /></button>
+                                <button className="delete-btn"><MdDeleteForever /></button>
+                            </li>
+                        })
+                    }
+                </ul>
+            </section>
         </section>
-    )
+
+    </section>
+)
 
 }
