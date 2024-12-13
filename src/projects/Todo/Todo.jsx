@@ -23,10 +23,7 @@ export const Todo = () => {
         setTask((prevTask) => [...prevTask, inputValue])
         setInputValue("");
     }
-
-
-
-
+    
     //  date and time 
     useEffect(() => {
         const interval = setInterval(() => {
@@ -38,10 +35,25 @@ export const Todo = () => {
         }, 1000);
 
         return () => clearInterval(interval);
-     }, [])
+     }, []);
 
 
+     // todo delet function 
 
+     const handleDeleteTodo = (value) =>{
+        console.log(task);
+        console.log(value);
+        const updatedTask= task.filter((curTask)=> curTask != value);
+        setTask(updatedTask);
+        
+     }
+
+
+     // todo handlecleartodo functianility
+
+     const handleClearTododata =() =>{
+        setTask([]);
+     }
 
 return (
     <section className="todo-container">
@@ -71,12 +83,16 @@ return (
                             return <li key={index} className="todo-item">
                                 <span>{curTask}</span>
                                 <button className="check-btn" ><IoMdCheckmark /></button>
-                                <button className="delete-btn"><MdDeleteForever /></button>
+                                <button className="delete-btn"
+                                 onClick={()=>handleDeleteTodo(curTask)}
+                                 >
+                                 <MdDeleteForever /></button>
                             </li>
                         })
                     }
                 </ul>
             </section>
+            <section className="clear-btn" onClick={handleClearTododata}>Clear all</section>
         </section>
 
     </section>
