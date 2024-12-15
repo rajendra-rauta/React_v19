@@ -55,7 +55,7 @@
     width: 100%;
   }
   
-  form input {
+  .todo-input {
     padding: 10px;
     font-size: 1.8rem;
     letter-spacing: 0.1rem;
@@ -68,7 +68,10 @@
     transition: background-color 200ms ease-in-out;
     width: 100%;
     background-color: #f2f3f4;
-    color: var(--primary-color);
+    /* color: var(--primary-color);
+     */
+     color: black;
+
   }
   
   form input:hover {
@@ -76,7 +79,7 @@
   }
   
   form input::placeholder {
-    color: white;
+    color: rgb(19, 2, 2);
     opacity: 0.7;
   }
   
@@ -121,13 +124,19 @@
     list-style: none;
   }
   
+.todo-btn{
+  height: 4rem;
+ 
+}
+
+
   .todo-item {
     margin: 2.4rem;
     /*word-wrap: break-word;
       */ /*flex-wrap: wrap;
       */
     font-size: 20px;
-    color: #1c2833;
+    color: #0e253a;
     border-radius: 30px;
     transition: background-color 200ms ease-in-out;
     background-color: #f2f3f4;
@@ -141,6 +150,7 @@
     /*align-items: center;
       */ /*wrapsthelinks*/
     overflow-wrap: anywhere;
+    
   }
   
   li span {
