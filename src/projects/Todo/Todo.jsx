@@ -4,9 +4,15 @@ import "./Todo.css";
 import { TodoDate } from "./TodoDate";
 import { TodoForm } from "./TodoForm";
 import { TodoList } from "./TodoList";
+import { getlocalStorageTodoData, setlocalStorageTodoData } from "./TodoLocalStorage";
+
+
+
+
+
 export const Todo = () => {
 
-    const [task, setTask] = useState([]);
+    const [task, setTask] = useState(() => getlocalStorageTodoData());
 
     const handleFormSubmit = (inputValue) => {
         const { id, content, cheacked } = inputValue;
@@ -20,19 +26,20 @@ export const Todo = () => {
 
         // if (task.includes(inputValue))  return;
         const ifTodoContentMatched = task.find((curTask) => curTask.content === content);
-        if (ifTodoContentMatched) 
+        if (ifTodoContentMatched)
             // setInputValue("");
-        return;
+            return;
 
         setTask((prevTask) => [...prevTask, { id, content, cheacked },
 
         ]);
         // setInputValue("");
-
     };
 
+    // add data to local storage 
 
-
+    setlocalStorageTodoData(task);
+    
     // todo delet function 
     const handleDeleteTodo = (value) => {
         // console.log(task);
@@ -48,15 +55,15 @@ export const Todo = () => {
 
 
     //  toto handleCheackedTodo  function
-    const handleCheackedTodo = (content)=>{
-        const updatedTask= task.map((curTask)=>{
-            if(curTask.content===content){
-                return{...curTask, cheacked: !curTask.cheacked};
+    const handleCheackedTodo = (content) => {
+        const updatedTask = task.map((curTask) => {
+            if (curTask.content === content) {
+                return { ...curTask, cheacked: !curTask.cheacked };
             }
-            else{
+            else {
                 return curTask;
             }
-            
+
         });
 
         setTask(updatedTask);
@@ -78,10 +85,10 @@ export const Todo = () => {
                         task.map((curTask) => {
                             return <TodoList
                                 key={curTask.id}
-                                cheacked= {curTask.cheacked}
+                                cheacked={curTask.cheacked}
                                 data={curTask.content}
                                 onhandleDeletTodo={handleDeleteTodo}
-                                onHandleCheackedTodo = {handleCheackedTodo}
+                                onHandleCheackedTodo={handleCheackedTodo}
                             />
                         })
                     }
