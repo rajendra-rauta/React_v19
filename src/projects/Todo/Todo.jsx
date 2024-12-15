@@ -9,15 +9,27 @@ export const Todo = () => {
     const [task, setTask] = useState([]);
 
     const handleFormSubmit = (inputValue) => {
+        const { id, content, cheacked } = inputValue;
 
-        if (!inputValue)
+
+        // to cheack the input field empty or not
+        if (!content)
             return;
 
-        if (task.includes(inputValue)) {
+        // to cheack the data is existing or no
+
+        // if (task.includes(inputValue))  return;
+        const ifTodoContentMatched = task.find((curTask) => curTask.content === content);
+        if (ifTodoContentMatched) 
             // setInputValue("");
-            return;
-        }
-        setTask((prevTask) => [...prevTask, inputValue])
+        return;
+
+       
+
+
+        setTask((prevTask) => [...prevTask, { id, content, cheacked },
+
+        ]);
         // setInputValue("");
 
     };
@@ -31,7 +43,7 @@ export const Todo = () => {
     const handleDeleteTodo = (value) => {
         // console.log(task);
         // console.log(value);
-        const updatedTask = task.filter((curTask) => curTask != value);
+        const updatedTask = task.filter((curTask) => curTask.content != value);
         setTask(updatedTask);
 
     }
@@ -56,8 +68,10 @@ export const Todo = () => {
             <section className="myOnOrdList">
                 <ul>
                     {
-                        task.map((curTask, index) => {
-                            return <TodoList key={index} data={curTask}
+                        task.map((curTask) => {
+                            return <TodoList
+                                key={curTask.id}
+                                data={curTask.content}
                                 onhandleDeletTodo={handleDeleteTodo}
                             />
                         })
