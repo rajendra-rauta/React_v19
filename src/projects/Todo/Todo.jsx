@@ -24,9 +24,6 @@ export const Todo = () => {
             // setInputValue("");
         return;
 
-       
-
-
         setTask((prevTask) => [...prevTask, { id, content, cheacked },
 
         ]);
@@ -34,25 +31,35 @@ export const Todo = () => {
 
     };
 
-    //  date and time 
-
 
 
     // todo delet function 
-
     const handleDeleteTodo = (value) => {
         // console.log(task);
         // console.log(value);
         const updatedTask = task.filter((curTask) => curTask.content != value);
         setTask(updatedTask);
-
     }
-
-
     // todo handlecleartodo functianility
 
     const handleClearTododata = () => {
         setTask([]);
+    }
+
+
+    //  toto handleCheackedTodo  function
+    const handleCheackedTodo = (content)=>{
+        const updatedTask= task.map((curTask)=>{
+            if(curTask.content===content){
+                return{...curTask, cheacked: !curTask.cheacked};
+            }
+            else{
+                return curTask;
+            }
+            
+        });
+
+        setTask(updatedTask);
     }
 
     return (
@@ -71,8 +78,10 @@ export const Todo = () => {
                         task.map((curTask) => {
                             return <TodoList
                                 key={curTask.id}
+                                cheacked= {curTask.cheacked}
                                 data={curTask.content}
                                 onhandleDeletTodo={handleDeleteTodo}
+                                onHandleCheackedTodo = {handleCheackedTodo}
                             />
                         })
                     }
