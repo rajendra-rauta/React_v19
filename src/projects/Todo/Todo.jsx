@@ -1,9 +1,8 @@
-
 import { useEffect, useState } from "react";
-import { IoMdCheckmark } from "react-icons/io";
-import { MdDeleteForever } from "react-icons/md";
+
 import "./Todo.css";
 import { TodoForm } from "./TodoForm";
+import { TodoList } from "./TodoList";
 export const Todo = () => {
 
     const [task, setTask] = useState([]);
@@ -19,10 +18,9 @@ export const Todo = () => {
         }
         setTask((prevTask) => [...prevTask, inputValue])
         // setInputValue("");
-   
-};
-    
- 
+
+    };
+
     //  date and time 
     useEffect(() => {
         const interval = setInterval(() => {
@@ -62,19 +60,16 @@ export const Todo = () => {
                 </h1>
                 <h2 className="date-time">{dateTime}</h2>
             </header>
-           <TodoForm onAddTodo = {handleFormSubmit} />
+            <TodoForm onAddTodo={handleFormSubmit} />
             <section className="myOnOrdList">
                 <ul>
                     {
                         task.map((curTask, index) => {
-                            return <li key={index} className="todo-item">
-                                <span>{curTask}</span>
-                                <button className="check-btn" ><IoMdCheckmark /></button>
-                                <button className="delete-btn"
-                                    onClick={() => handleDeleteTodo(curTask)}
-                                >
-                                    <MdDeleteForever /></button>
-                            </li>
+                            return <TodoList key={index} data={curTask}
+                                onHandleDeletTodo={handleDeleteTodo}
+                            />
+
+
                         })
                     }
                 </ul>
