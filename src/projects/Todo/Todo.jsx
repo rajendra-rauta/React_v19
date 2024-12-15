@@ -58,7 +58,7 @@ export const Todo = () => {
                     {
                         task.map((curTask, index) => {
                             return <TodoList key={index} data={curTask}
-                                onHandleDeletTodo={handleDeleteTodo}
+                                onhandleDeletTodo={handleDeleteTodo}
                             />
                         })
                     }
