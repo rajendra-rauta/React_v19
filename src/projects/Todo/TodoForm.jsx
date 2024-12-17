@@ -30,5 +30,5 @@ export const TodoForm = ({ onAddTodo }) => {
             </form>
         </section>
 
-    );
+    ); 
 };
