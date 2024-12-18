@@ -22,6 +22,8 @@ export const TodoForm = ({ onAddTodo }) => {
                         value={inputValue.content}
                         onChange={(event) => handleInputChange(event.target.value)}
                     >
+
+                    
                     </input>
                 </div>
                 <div>
