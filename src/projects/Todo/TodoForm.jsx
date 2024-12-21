@@ -9,7 +9,7 @@ export const TodoForm = ({ onAddTodo }) => {
         event.preventDefault();
         onAddTodo(inputValue);
         setInputValue({ id: "", content: "", cheacked: "" });
-    }
+    } 
     return (
         <section>
             <form className="form" onSubmit={handleFormSubmit}>
