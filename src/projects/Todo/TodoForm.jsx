@@ -5,15 +5,11 @@ export const TodoForm = ({ onAddTodo }) => {
     const handleInputChange = (value) => {
         setInputValue({ id: value, content: value, cheacked: false })
     };
-
-
     const handleFormSubmit = (event) => {
         event.preventDefault();
         onAddTodo(inputValue);
         setInputValue({ id: "", content: "", cheacked: "" });
-
     }
-
     return (
         <section>
             <form className="form" onSubmit={handleFormSubmit}>
@@ -30,5 +26,5 @@ export const TodoForm = ({ onAddTodo }) => {
             </form>
         </section>
 
-    ); 
+    );
 }; 
