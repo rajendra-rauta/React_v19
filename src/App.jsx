@@ -9,9 +9,9 @@ import "./components/Ev.css";
 // import styles from "./components/Netflix.module.css";
 // import { State } from "./hooks/state";
 import './index.css'
-import { Todo } from "./projects/Todo/Todo";
+// import { Todo } from "./projects/Todo/Todo";
 // import { ToggleSwitch } from "./projects/toggleswitch/ToggleSwitch";
-
+ import { Counter } from "./components/hooks/useState";
 
 export const App = () => {
   // const value = "Rajendra Rauta"
@@ -27,8 +27,9 @@ export const App = () => {
       {/* <DerivedState /> */}
       {/* <LiftingState /> */}
       {/* <ToggleSwitch /> */}
-      <Todo/>
-
+      {/* <Todo/> */}
+      <Counter />
+      
 
     </section>
 
