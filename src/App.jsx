@@ -11,8 +11,8 @@ import "./components/Ev.css";
 import './index.css'
 // import { Todo } from "./projects/Todo/Todo";
 // import { ToggleSwitch } from "./projects/toggleswitch/ToggleSwitch";
- import { Counter } from "./components/hooks/useState";
-
+//  import { Counter } from "./components/hooks/useState";
+import { ShortCircuitExample } from "./components/hooks/ShortCyrcuit";
 export const App = () => {
   // const value = "Rajendra Rauta"
   return (
@@ -28,7 +28,9 @@ export const App = () => {
       {/* <LiftingState /> */}
       {/* <ToggleSwitch /> */}
       {/* <Todo/> */}
-      <Counter />
+      {/* <Counter /> */}
+
+      <ShortCircuitExample />
       
 
     </section>
