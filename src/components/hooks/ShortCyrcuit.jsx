@@ -24,7 +24,8 @@ export const ShortCircuitExample = () => {
       {/* Conditional rendering using short circuit evaluation */}
       {isLoggedIn && <p>You are logged in!</p>}
 
-      {/* Another example of short circuit evaluation */}
+      {/* Another example of short circuit evaluation */} 
+      
       {user ? `Hello ${user}` : "Plz log in!"}
 
       <div className="grid-three-cols">
