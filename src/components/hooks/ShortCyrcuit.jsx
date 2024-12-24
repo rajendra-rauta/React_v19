@@ -34,7 +34,7 @@ export const ShortCircuitExample = () => {
         <button onClick={() => setUser("vinod thapa")}>Set User</button>
         <button onClick={() => setUser("")}>Clear User</button>
       </div>
-    </section>
+    </section> 
   );
 };
 
