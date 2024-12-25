@@ -12,7 +12,8 @@ import './index.css'
 // import { Todo } from "./projects/Todo/Todo";
 // import { ToggleSwitch } from "./projects/toggleswitch/ToggleSwitch";
 //  import { Counter } from "./components/hooks/useState";
-import { ShortCircuitExample } from "./components/hooks/ShortCyrcuit";
+// import { ShortCircuitExample } from "./components/hooks/ShortCyrcuit";
+import { RegistrationForm } from "./components/hooks/useState/Registation";
 export const App = () => {
   // const value = "Rajendra Rauta"
   return (
@@ -30,7 +31,8 @@ export const App = () => {
       {/* <Todo/> */}
       {/* <Counter /> */}
 
-      <ShortCircuitExample />
+      {/* <ShortCircuitExample /> */}
+      <RegistrationForm />
       
 
     </section>
