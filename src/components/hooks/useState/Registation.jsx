@@ -18,7 +18,9 @@ export const RegistrationForm = () => {
   const [password, setPassword] = useState("");
   const [phoneNumber, setPhoneNumber] = useState("");
 
-  const handleInputChange = (e) => {
+  const handleInputChange = (e) => { 
+
+    
     const { name, value } = e.target;
 
     switch (name) {
