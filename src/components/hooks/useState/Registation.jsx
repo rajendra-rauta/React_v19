@@ -20,7 +20,7 @@ export const RegistrationForm = () => {
 
   const handleInputChange = (e) => { 
 
-    
+
     const { name, value } = e.target;
 
     switch (name) {
@@ -32,6 +32,7 @@ export const RegistrationForm = () => {
         setLastName(value);
         break;
 
+        
       case "email":
         setEmail(value);
         break;
