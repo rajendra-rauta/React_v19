@@ -13,7 +13,8 @@ import './index.css'
 // import { ToggleSwitch } from "./projects/toggleswitch/ToggleSwitch";
 //  import { Counter } from "./components/hooks/useState";
 // import { ShortCircuitExample } from "./components/hooks/ShortCyrcuit";
-import { RegistrationForm } from "./components/hooks/useState/Registation";
+// import { RegistrationForm } from "./components/hooks/useState/Registation";
+import { LoginForm } from "./components/hooks/useState/LoginForm";
 export const App = () => {
   // const value = "Rajendra Rauta"
   return (
@@ -32,7 +33,8 @@ export const App = () => {
       {/* <Counter /> */}
 
       {/* <ShortCircuitExample /> */}
-      <RegistrationForm />
+      {/* <RegistrationForm /> */}
+      <LoginForm />
       
 
     </section>
