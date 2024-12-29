@@ -20,6 +20,8 @@ export const App = () => {
   return (
     
 
+    
+
     <section >
       {/* <h1 className={styles["card-heading"]}>List of Best Netflix Series</h1> */}
       {/* <NetflixSeries /> */}
