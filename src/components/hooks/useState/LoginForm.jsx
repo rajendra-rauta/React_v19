@@ -7,12 +7,10 @@ export const LoginForm = () => {
 
   const handleFormSubmit = (e) => {
     e.preventDefault();
-
     const loginData = {
       username,
       password,
     };
-
     console.log(loginData);
   };
 
@@ -30,7 +28,6 @@ export const LoginForm = () => {
             value={username}
             onChange={(e) => setUsername(e.target.value)}
           />
-
           <label htmlFor="password">Password</label>
           <input
             type="password"
@@ -40,7 +37,6 @@ export const LoginForm = () => {
             value={password}
             onChange={(e) => setPassword(e.target.value)}
           />
-
           <button type="submit">Login</button>
         </form>
       </div>

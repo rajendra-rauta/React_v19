@@ -18,10 +18,6 @@ import { LoginForm } from "./components/hooks/useState/LoginForm";
 export const App = () => {
   // const value = "Rajendra Rauta"
   return (
-    
-
-    
-
     <section >
       {/* <h1 className={styles["card-heading"]}>List of Best Netflix Series</h1> */}
       {/* <NetflixSeries /> */}
