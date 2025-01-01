@@ -13,7 +13,6 @@ export const LoginForm = () => {
     };
     console.log(loginData);
   };
-
   return (
     <div className="container">
       <div className="card">
@@ -29,9 +28,7 @@ export const LoginForm = () => {
             onChange={(e) => setUsername(e.target.value)}
           />
           <label htmlFor="password">Password</label>
-          <input 
-
-          
+          <input
             type="password"
             name="password"
             required
