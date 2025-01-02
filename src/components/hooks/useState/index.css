@@ -1,12 +1,10 @@
 @import url("https://fonts.googleapis.com/css?family=Montserrat:400,500&display=swap");
-
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   font-family: "Urbanist", sans-serif;
 }
-
 html {
   font-size: 62.5%;
 }
@@ -16,7 +14,6 @@ html {
   --secondary-color: #fff;
   --bg-color: #f2f3f4;
 }
-
 h1,
 h2,
 h3,
@@ -71,7 +68,6 @@ textarea {
   font-family: Montserrat, Arial, Helvetica, sans-serif;
   font-size: 1.6rem;
 }
-
 input[type="phone"] {
   width: 100%;
   padding: 15px;
@@ -80,8 +76,6 @@ input[type="phone"] {
   border: none;
   background: #f7f7f7;
 }
-
-
 input[type="text"]:focus,
 
 input[type="password"]:focus,
@@ -89,7 +83,6 @@ input[type="phone"]:focus {
   background-color: #ddd;
   outline: none;
 }
-
 /* Set a style for all buttons */
 button {
   background-color: #0eb7f4;
@@ -104,11 +97,9 @@ button {
   font-family: Montserrat, Arial, Helvetica, sans-serif;
   border-radius: 10px;
 }
-
 button:hover {
   opacity: 1;
 }
-
 span {
   font-size: 1.6rem;
   font-weight: bold;
