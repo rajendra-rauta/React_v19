@@ -8,7 +8,6 @@
 html {
   font-size: 62.5%;
 }
-
 :root {
   --primary-color: #1c2833;
   --secondary-color: #fff;
@@ -22,13 +21,11 @@ h5,
 h6 {
   font-weight: 900;
 }
-
 h1 {
   font-size: 4.2rem;
   font-weight: bold;
   margin-bottom: 1.6rem;
 }
-
 body {
   font-family: Montserrat, Arial, Helvetica, sans-serif;
   background-color: #f7f7f7;
@@ -36,7 +33,6 @@ body {
 * {
   box-sizing: border-box;
 }
-
 /* Add padding to container elements */
 .container {
   padding: 20px;
@@ -53,7 +49,6 @@ body {
   -moz-box-shadow: 2px 1px 21px -9px rgba(0, 0, 0, 0.38);
   box-shadow: 2px 1px 21px -9px rgba(0, 0, 0, 0.38);
 }
-
 /* Full-width input fields */
 input[type="text"],
 input[type="email"],
@@ -77,7 +72,6 @@ input[type="phone"] {
   background: #f7f7f7;
 }
 input[type="text"]:focus,
-
 input[type="password"]:focus,
 input[type="phone"]:focus {
   background-color: #ddd;
@@ -114,7 +108,6 @@ p {
   margin-bottom: 3.2rem;
   font-size: 1.8rem;
 }
-
 /* Change styles for signup button on extra small screens */
 @media screen and (max-width: 300px) {
   .signupbtn {
