@@ -60,7 +60,7 @@ textarea {
   display: inline-block;
   border: none;
 
-  
+
   background: #f7f7f7;
   font-family: Montserrat, Arial, Helvetica, sans-serif;
   font-size: 1.6rem;
@@ -70,7 +70,9 @@ input[type="phone"] {
   padding: 15px;
   margin: 5px 0 22px 0;
   display: inline-block;
-  border: none;
+  border: none;  
+
+  
   background: #f7f7f7;
 }
 input[type="text"]:focus,
