@@ -80,6 +80,7 @@ input[type="password"]:focus,
 input[type="phone"]:focus {
   background-color: #ddd;
   outline: none;
+  
 }
 /* Set a style for all buttons */
 button {
