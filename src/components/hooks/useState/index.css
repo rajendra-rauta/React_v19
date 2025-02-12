@@ -101,6 +101,8 @@ button {
 button:hover {
   opacity: 1;
 }
+
+
 span {
   font-size: 1.6rem;
   font-weight: bold;
@@ -121,4 +123,4 @@ p {
   .signupbtn {
     width: 100%;
   }
-}
+} 
