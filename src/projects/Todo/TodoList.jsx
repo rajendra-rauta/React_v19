@@ -4,7 +4,6 @@ import { MdDeleteForever } from "react-icons/md";
 export const TodoList = ({ onhandleDeletTodo, onHandleCheackedTodo , data, cheacked, }) => {
 
     return (
-
         <li className="todo-item">
             <span className={cheacked ? "checkList" : "notCheckList"}>{data}</span>
             <button className="check-btn" onClick={()=> onHandleCheackedTodo(data)} >
