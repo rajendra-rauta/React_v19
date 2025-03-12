@@ -10,9 +10,6 @@ export const TodoList = ({ onhandleDeletTodo, onHandleCheackedTodo , data, cheac
             <IoMdCheckmark />
             </button>
             <button className="delete-btn"
-
-
-            
                 onClick={() => onhandleDeletTodo(data)} >
                 <MdDeleteForever /></button>
         </li>
