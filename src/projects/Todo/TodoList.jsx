@@ -5,6 +5,7 @@ export const TodoList = ({ onhandleDeletTodo, onHandleCheackedTodo , data, cheac
 
     return (
         <li className="todo-item">
+        
             <span className={cheacked ? "checkList" : "notCheckList"}>{data}</span>
             <button className="check-btn" onClick={()=> onHandleCheackedTodo(data)} >
             <IoMdCheckmark />
